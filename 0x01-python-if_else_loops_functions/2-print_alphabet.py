@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 alpha = "abcdefghijklmnopqrstuvwxyz"
 for let in alpha:
-    print(let, end='')
+    print(let.format(), end='')
