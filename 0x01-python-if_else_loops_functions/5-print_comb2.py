@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 print("0" + str(0), end='')
-i = 1
+i = 0
 while i < 100:
     if i < 10:
-        print(", 0".format() + str(i), end='')
+        message = ", 0".format() + str(i)
     else:
-        print(", ".format() + str(i), end='')
+        message = ", ".format() + str(i)
+    print(message, end='')
     i += 1
