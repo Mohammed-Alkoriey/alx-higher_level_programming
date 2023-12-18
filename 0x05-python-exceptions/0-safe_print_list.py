@@ -3,11 +3,11 @@
 def safe_print_list(my_list=[], x=0):
     count = 0
 
-    for num in my_list:
-        if count < x:
-            print(num, end="")
+    while count < x:
+        try:
+            print(my_list[count], end="")
             count += 1
-        else:
+        except:
             break
     print("")
     return count
