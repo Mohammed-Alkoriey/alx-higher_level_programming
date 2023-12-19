@@ -7,7 +7,7 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """creates a copy of square class"""
         self.__size = size
-        self.__position = position
+        self.position = position
 
     def area(self):
         result = self.__size * self.__size
@@ -46,6 +46,21 @@ class Square:
         """Setter method"""
         if type(value) is not tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if any(type(i) is not int for i in value) or any(j < 0 for j in value):
+        if any(type(x) is not int for x in value) or any(z < 0 for z in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
+
+my_square_1 = Square(3)
+my_square_1.my_print()
+
+print("--")
+
+my_square_2 = Square(3, (1, 1))
+my_square_2.my_print()
+
+print("--")
+
+my_square_3 = Square(3, (3, 0))
+my_square_3.my_print()
+
+print("--")
