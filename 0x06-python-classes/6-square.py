@@ -36,11 +36,12 @@ class Square:
                 print("")
         else:
             print("")
+
     @property
     def position(self):
         return self.__position
 
-      @position.setter
+    @position.setter
     def position(self, value):
         """Setter method"""
         if type(value) is not tuple or len(value) != 2:
