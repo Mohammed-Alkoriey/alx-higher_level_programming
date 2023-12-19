@@ -27,7 +27,11 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def my_print(self):
-        for i in range(0, self.size):
-            for x in range(0, self.size):
-                print("#", end="")
+        """prints the square's area with hashes"""
+        if self.size != 0:
+            for i in range(0, self.size):
+                for x in range(0, self.size):
+                    print("#", end="")
+                print("")
+        else:
             print("")
