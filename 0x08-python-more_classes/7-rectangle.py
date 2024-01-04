@@ -56,7 +56,7 @@ class Rectangle():
 
         for x in range(0, self.height):
             for y in range(0, self.width):
-                hashed.append(self.print_symbol)
+                hashed.append(str(self.print_symbol))
             hashed.append("\n")
 
         hashed.pop()
