@@ -43,14 +43,15 @@ class Rectangle():
             return 0
         else:
             return (2 * self.width) + (2 * self.height)
+
     def __str__(self):
         hashed = []
 
         if self.width == 0 or self.height == 0:
             return ''
 
-        for(x in range(0, self.height)):
-            for(y in range(0, self.width)):
+        for (x in range(0, self.height)):
+            for (y in range(0, self.width)):
                 hashed.append("#")
             hashed.append("\n")
 
