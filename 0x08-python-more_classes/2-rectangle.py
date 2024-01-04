@@ -35,12 +35,12 @@ class Rectangle():
             self.__height = value
 
     def area(self):
-        are = self.width * self.height
+        are = self.__width * self.__height
         return are
 
     def perimeter(self):
-        if self.width == 0 || self.height == 0:
+        if self.__width == 0 || self.__height == 0:
             per = 0
         else:
-            per = (2 * self.width) + (2 * self.height)
+            per = (2 * self.__width) + (2 * self.__height)
         return per
