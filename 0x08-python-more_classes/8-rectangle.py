@@ -69,17 +69,17 @@ class Rectangle():
         print("{:s}".format("Bye rectangle..."))
         type(self).number_of_instances -= 1
 
-    def bigger_or_equal(rect1, rect2):
-        if not isinstance(rect1, Rectangle):
-            raise TypeError("rect1 must be an instance of Rectangle")
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
 
-        if not isinstance(rect2, Rectangle):
-            raise TypeError("rect2 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
 
-        are1 = rect1.are()
-        are2 = rect2.are()
+        are1 = rect_1.are()
+        are2 = rect_2.are()
 
         if are1 >= are2:
-            return rect1
+            return rect_1
 
-        return rect2
+        return rect_2
