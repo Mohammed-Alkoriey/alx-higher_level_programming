@@ -43,5 +43,4 @@ class Rectangle():
             per = 0
         else:
             per = (2 * self.width) + (2 * self.height)
-
         return per
