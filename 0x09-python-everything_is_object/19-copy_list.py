@@ -1,3 +1,3 @@
-def copy_list(l):
-    cop = l[:]
-    return cop
+#!/usr/bin/python3
+def copy_list(lis):
+    return lis[:]
