@@ -5,5 +5,5 @@
 
 def write_file(filename="", text=""):
     """appending into a file"""
-    with open(filename, "a+", encoding="utf-8") as file1:
+    with open(filename, "a", encoding="utf-8") as file1:
         return file1.write(text)
