@@ -20,7 +20,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        attr_valid("width", value)
+        attr_valid("width", value, False)
         self.__width = value
 
     @property
@@ -29,7 +29,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        attr_valid("height", value)
+        attr_valid("height", value, False)
         self.__height = value
 
     @property
