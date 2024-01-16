@@ -58,3 +58,6 @@ class Rectangle(Base):
             raise ValueError("{} must be >= 0".format(attr))
         elif not equal and val <= 0:
             raise ValueError("{} must be > 0".format(attr))
+
+    def area(self):
+        return self.width * self.height
