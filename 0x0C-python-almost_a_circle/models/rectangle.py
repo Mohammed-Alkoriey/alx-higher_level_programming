@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """module for Rectangle"""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -62,3 +62,10 @@ class Rectangle(Base):
     def area(self):
         """returns the area of the rectangle"""
         return self.width * self.height
+
+    def display(self):
+        """display the rectangle with hashes"""
+        for i in range(0, self.height):
+            for s in range(0, self.width):
+                print("#", end="")
+            print("")
