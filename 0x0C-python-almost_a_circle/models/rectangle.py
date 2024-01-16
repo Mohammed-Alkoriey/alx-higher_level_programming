@@ -20,10 +20,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if not isinstance(value, int):
-            raise TypeError("width must ba an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
+        attr_valid("width", value)
         self.__width = value
 
     @property
@@ -32,10 +29,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        if not isinstance(value, int):
-            raise TypeError("height must ba an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
+        attr_valid("height", value)
         self.__height = value
 
     @property
@@ -44,10 +38,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if not isinstance(value, int):
-            raise TypeError("x must ba an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        attr_valid("x", value)
         self.__x = value
 
     @property
@@ -56,8 +47,14 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        if not isinstance(value, int):
-            raise TypeError("y must ba an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
+        attr_valid("y", value)
         self.__y = value
+
+    def attr_valid(self, attr, val, equal=True):
+        '''Method for validating the attribute.'''
+        if type(val) is not int:
+            raise TypeError("{} must be an integer".format(attr))
+        if equal and val < 0:
+            raise ValueError("{} must be >= 0".format(attr))
+        elif not equal and val <= 0:
+            raise ValueError("{} must be > 0".format(attr))
