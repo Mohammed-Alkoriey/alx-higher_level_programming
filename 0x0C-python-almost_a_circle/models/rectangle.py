@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """module for Rectangle"""
-from model.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -65,6 +65,7 @@ class Rectangle(Base):
 
     def display(self):
         """display the rectangle with hashes"""
-        s = '\n' * self.y + \
-            (' ' * self.x + '#' * self.width + '\n') * self.height
-        print(s, end='')
+        for i in range(0, self.height):
+            for s in range(0, self.width):
+                print("#", end="")
+            print("")
