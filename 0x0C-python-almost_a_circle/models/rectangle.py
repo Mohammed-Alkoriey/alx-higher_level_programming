@@ -65,7 +65,6 @@ class Rectangle(Base):
 
     def display(self):
         """display the rectangle with hashes"""
-        for i in range(0, self.height):
-            for s in range(0, self.width):
-                print("#", end="")
-            print("")
+        s = '\n' * self.y + \
+            (' ' * self.x + '#' * self.width + '\n') * self.height
+        print(s, end='')
