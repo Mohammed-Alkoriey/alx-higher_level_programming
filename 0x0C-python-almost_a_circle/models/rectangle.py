@@ -64,8 +64,14 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """display the rectangle with hashes"""
-        for i in range(0, self.height):
-            for s in range(0, self.width):
+        """Prints in stdout the Rectangle instance with the character #."""
+        if self.__y > 0:
+            for i in range(self.__y):
+                print()
+            self.__y = 0
+        for i in range(self.__height):
+            for j in range(self.__width):
+                if self.__y == j:
+                    print(" " * self.__x, end="")
                 print("#", end="")
-            print("")
+            print()
